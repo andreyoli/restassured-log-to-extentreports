@@ -1,0 +1,7 @@
+envs:
+  - name: dev
+    url: https://
+  - name: tst
+    url: https://
+  - name: uat
+    url: https://

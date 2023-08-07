@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.testng:testng:7.7.0'
+    implementation 'com.aventstack:extentreports-testng-adapter:1.2.2'
+    implementation 'io.rest-assured:rest-assured:5.3.0'
+    implementation 'io.rest-assured:json-schema-validator:5.3.0'
+    implementation 'org.slf4j:slf4j-api:2.0.5'
+    testImplementation 'org.slf4j:slf4j-simple:2.0.5'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.yaml:snakeyaml:1.33'
+    implementation 'com.github.tomakehurst:wiremock:2.27.2'
+    implementation 'com.aventstack:extentreports:5.0.9'
+    compileOnly("org.projectlombok:lombok:1.18.24")
+    annotationProcessor 'org.projectlombok:lombok:1.18.24'
+}
+
+test {
+    useTestNG() { //Tells Gradle to use TestNG
+        useDefaultListeners = true // Tells TestNG to execute its default reporting structure
+    }
+}
